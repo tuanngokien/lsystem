@@ -26,14 +26,12 @@ R3Shape R3Mesh::Leaf(const R3Vector direction)
   if (z==0) z=(rand()%20 -10 ) /100.0; //some random bend if non
 
   vector<R3MeshVertex *> face;
-  face.push_back(CreateVertex(R3Point(0,.01,0)  ,R2Point(.5,.01) )); 
+  face.push_back(CreateVertex(R3Point(-.12,.01,0)  ,R2Point(.5,.01) )); 
   face.push_back(CreateVertex(R3Point(.12,.1,0)  ,R2Point(.7,.1) ));
   face.push_back(CreateVertex(R3Point(.25,.3,0) ,R2Point(.75,.3) ));
   face.push_back(CreateVertex(R3Point(.2,.6,z/2) ,R2Point(.7,.6) ));
-  face.push_back(CreateVertex(R3Point(.2,.6,z/2) ,R2Point(.7,.6) ));  
 
-  
-  face.push_back(CreateVertex(R3Point(.2,.6,z/2) ,R2Point(.7,.6) ));
+
   face.push_back(CreateVertex(R3Point(0,0.65,z) ,R2Point(.5,1) ));
   face.push_back(CreateVertex(R3Point(-.2,.6,z/2) ,R2Point(.3,.6) ));
   face.push_back(CreateVertex(R3Point(-.25,.3,0) ,R2Point(.25,.3) ));
