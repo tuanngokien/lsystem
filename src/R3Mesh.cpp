@@ -27,15 +27,16 @@ R3Shape R3Mesh::Leaf(const R3Vector direction)
 
   vector<R3MeshVertex *> face;
   face.push_back(CreateVertex(R3Point(0,.01,0)  ,R2Point(.5,.01) )); 
-  face.push_back(CreateVertex(R3Point(.2,.1,0)  ,R2Point(.7,.1) ));
+  face.push_back(CreateVertex(R3Point(.12,.1,0)  ,R2Point(.7,.1) ));
   face.push_back(CreateVertex(R3Point(.25,.3,0) ,R2Point(.75,.3) ));
   face.push_back(CreateVertex(R3Point(.2,.6,z/2) ,R2Point(.7,.6) ));
-  
 
-  face.push_back(CreateVertex(R3Point(0,1-z,z) ,R2Point(.5,1) ));
+
+  face.push_back(CreateVertex(R3Point(0,0.65,z) ,R2Point(.5,1) ));
   face.push_back(CreateVertex(R3Point(-.2,.6,z/2) ,R2Point(.3,.6) ));
   face.push_back(CreateVertex(R3Point(-.25,.3,0) ,R2Point(.25,.3) ));
-  face.push_back(CreateVertex(R3Point(-.2,.1,0) ,R2Point(.3,.1) ));
+  face.push_back(CreateVertex(R3Point(-.12,.1,0) ,R2Point(.3,.1) ));
+
   CreateFace(face)->isLeaf=true;
   return face;
 
@@ -270,6 +271,7 @@ ScaleShape(vector<R3MeshVertex *> shape,double sx, double sy, double sz)
   // This is implemented for you as an example 
 
   // Update vertices
+
   for (unsigned int i = 0; i < shape.size(); i++) {
     R3MeshVertex *vertex = shape[i];
     vertex->position[0] *= sx;

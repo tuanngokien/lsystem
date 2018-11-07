@@ -102,7 +102,6 @@ void TurtleSystem::restore()
 }
 void TurtleSystem::drawLeaf(float param)
 {
-
   R3Shape s=mesh->Leaf(direction);
 
   mesh->ScaleShape(s,param,param,param);
