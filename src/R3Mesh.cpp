@@ -30,8 +30,10 @@ R3Shape R3Mesh::Leaf(const R3Vector direction)
   face.push_back(CreateVertex(R3Point(.12,.1,0)  ,R2Point(.7,.1) ));
   face.push_back(CreateVertex(R3Point(.25,.3,0) ,R2Point(.75,.3) ));
   face.push_back(CreateVertex(R3Point(.2,.6,z/2) ,R2Point(.7,.6) ));
+  face.push_back(CreateVertex(R3Point(.2,.6,z/2) ,R2Point(.7,.6) ));  
 
-
+  
+  face.push_back(CreateVertex(R3Point(.2,.6,z/2) ,R2Point(.7,.6) ));
   face.push_back(CreateVertex(R3Point(0,0.65,z) ,R2Point(.5,1) ));
   face.push_back(CreateVertex(R3Point(-.2,.6,z/2) ,R2Point(.3,.6) ));
   face.push_back(CreateVertex(R3Point(-.25,.3,0) ,R2Point(.25,.3) ));
